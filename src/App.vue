@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div class="">
+    <HeaderContent> </HeaderContent>
+    <NewProduct> </NewProduct>
+    <MostViewProduct> </MostViewProduct>
+    <MostBuyItemContent> </MostBuyItemContent>
+    <FooterContent> </FooterContent>
+    <BagOfListItem> </BagOfListItem>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HeaderContent from './components/HeaderContent'
+import NewProduct from './components/NewProduct'
+import MostViewProduct from './components/MostViewProduct'
+import FooterContent from './components/FooterContent'
+import MostBuyItemContent from './components/MostBuyItemContent'
+import BagOfListItem from './pages/BagOfListItem.vue'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    data() {
+      return {
+        homeData: {}
+      }
+    },
+    components: {
+      HeaderContent,
+      NewProduct,
+      MostViewProduct,
+      FooterContent,
+      MostBuyItemContent,
+      BagOfListItem
+    },
+
 }
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped src="@/assets/index.css">
+
 </style>
